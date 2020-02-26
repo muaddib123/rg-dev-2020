@@ -2,12 +2,12 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: rgdev
-  namespace: develop
+  namespace: staging
   labels:
     module: rgdev
   annotations:
     flux.weave.works/automated: 'true'
-    flux.weave.works/tag.rgdev: glob:*-SNAPSHOT.*
+    flux.weave.works/tag.rgdev: semver:0.x.x
 spec:
   strategy:
     type: RollingUpdate
@@ -25,5 +25,5 @@ spec:
     spec:
       containers:
       - name: rgdev
-        image: gcr.io/still-mesh-252617/rgdev:0.0.1-SNAPSHOT
+        image: gcr.io/still-mesh-252617/rgdev:0.0.1
         imagePullPolicy: IfNotPresent
