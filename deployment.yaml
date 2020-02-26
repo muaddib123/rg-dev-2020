@@ -3,12 +3,11 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: rgdev
-  namespace: staging
+  namespace: production
   labels:
     module: rgdev
   annotations:
-    flux.weave.works/automated: 'true'
-    flux.weave.works/tag.rgdev: semver:0.x.x
+    flux.weave.works/automated: 'false'
 spec:
   strategy:
     type: RollingUpdate
