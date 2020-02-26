@@ -1,3 +1,4 @@
+---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -25,5 +26,5 @@ spec:
     spec:
       containers:
       - name: rgdev
-        image: gcr.io/still-mesh-252617/rgdev:0.0.1-SNAPSHOT
+        image: gcr.io/still-mesh-252617/rgdev:0.0.1-SNAPSHOT.3
         imagePullPolicy: IfNotPresent
