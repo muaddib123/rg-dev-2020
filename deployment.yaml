@@ -26,3 +26,7 @@ spec:
       - name: rgdev
         image: gcr.io/still-mesh-252617/rgdev-demo:0.0.1
         imagePullPolicy: IfNotPresent
+      volumes:
+      - name: example-secret
+        secret:
+          secretName: mysecret
