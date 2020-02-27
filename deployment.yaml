@@ -26,5 +26,5 @@ spec:
     spec:
       containers:
       - name: rgdev
-        image: gcr.io/still-mesh-252617/rgdev:0.0.6
+        image: gcr.io/still-mesh-252617/rgdev:0.0.7
         imagePullPolicy: IfNotPresent
