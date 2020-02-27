@@ -1,3 +1,4 @@
+---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -24,7 +25,7 @@ spec:
     spec:
       containers:
       - name: rgdev
-        image: gcr.io/still-mesh-252617/rgdev-demo:0.0.1
+        image: gcr.io/still-mesh-252617/rgdev-demo:0.0.5
         imagePullPolicy: IfNotPresent
       volumes:
       - name: example-secret
