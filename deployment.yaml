@@ -31,3 +31,6 @@ spec:
       - name: example-secret
         secret:
           secretName: mysecret
+      - name: example-configmap
+        configMap:
+          name: example-configmap
