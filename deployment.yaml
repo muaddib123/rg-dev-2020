@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: rgdev
+  namespace: rgdev
+  labels:
+    module: rgdev
+  annotations:
+    flux.weave.works/automated: 'true'
+spec:
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxUnavailable: 0
+      maxSurge: 1
+  replicas: 1
+  selector:
+    matchLabels:
+      module: rgdev
+  template:
+    metadata:
+      labels:
+        module: rgdev
+    spec:
+      containers:
+      - name: rgdev
+        image: gcr.io/still-mesh-252617/rgdev-demo:0.0.1
+        imagePullPolicy: IfNotPresent
